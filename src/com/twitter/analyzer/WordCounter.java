@@ -22,6 +22,11 @@ public class WordCounter {
 	public void setWordCountMap(Map<String, Integer> wordCountMap) {
 		this.wordCountMap = wordCountMap;
 	}
+	/**
+	 * 
+	 * @param wordsinTweet
+	 * put words into map and increment if already exists in map
+	 */
 	public void countWords(String[] wordsinTweet){
 		for(String word:wordsinTweet){
 			Integer currentCount= this.wordCountMap.get(word);
@@ -31,11 +36,7 @@ public class WordCounter {
 			this.wordCountMap.put(word, currentCount+1); 
 		}
 	}
-	/**
-	 * 
-	 * @param outputFileName, word counts are written to this file
-	 * @throws Exception 
-	 */
+	
 	public Map<String,Integer> getWordCount() throws Exception{
 		return this.wordCountMap;
 	}
