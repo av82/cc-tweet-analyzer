@@ -99,7 +99,7 @@ public class TweetManager {
 		try {
 			BufferedWriter bw = new BufferedWriter(out);
 			for (Map.Entry<String, Integer> en : wordCountMap.entrySet()) {
-				bw.write(en.getKey() + "\t\t\t\t\t" + en.getValue().toString());
+				bw.write(String.format("%-30s %-35s",en.getKey(),en.getValue().toString()));
 				bw.newLine();
 				bw.flush();
 			}
