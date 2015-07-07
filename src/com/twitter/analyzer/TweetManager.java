@@ -80,13 +80,7 @@ public class TweetManager {
 	private void writeMedian(Double median, OutputStreamWriter out) throws Exception {
 		try {
 			BufferedWriter bw = new BufferedWriter(out);
-			NumberFormat formatter = new DecimalFormat("#0");
-			String formattedMedian="";
-			if(median %1 ==0){ //if whole number then format according to requirement
-				formattedMedian=formatter.format(median);
-			}
-			else formattedMedian=median.toString();
-			bw.append(formattedMedian);
+			bw.append(String.format( "%.2f", median));
 			bw.newLine();
 			bw.flush();
 		} catch (IOException e) {
