@@ -24,5 +24,10 @@ The class also throws errors if there is an I/O error like file not found except
 
 The paths of input files, output files are relative to the manager class.
 
+**Files:**
+
+Input file is located under tweet_input folder (tweets.txt)
+Output files are written to tweet_output folder ( ft1.txt , ft2.txt ).
+
 Program can be run with *./run.sh* command.
                 
