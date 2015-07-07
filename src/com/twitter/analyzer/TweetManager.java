@@ -8,6 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -78,7 +80,13 @@ public class TweetManager {
 	private void writeMedian(Double median, OutputStreamWriter out) throws Exception {
 		try {
 			BufferedWriter bw = new BufferedWriter(out);
-			bw.append(median.toString());
+			NumberFormat formatter = new DecimalFormat("#0");
+			String formattedMedian="";
+			if(median %1 ==0){ //if whole number then format according to requirement
+				formattedMedian=formatter.format(median);
+			}
+			else formattedMedian=median.toString();
+			bw.append(formattedMedian);
 			bw.newLine();
 			bw.flush();
 		} catch (IOException e) {
