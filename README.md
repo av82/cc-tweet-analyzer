@@ -9,7 +9,7 @@ The program implements two features:
 
 The program is built with Java
 
-There is a manager class (TweetManager.java)  that facilitates I/O operation for reading input file, write the out files, parse the tweets (lines).
+There is a manager class (TweetManager.java)  that facilitates I/O operation for reading input file, write the output files, parse the tweets (lines).
 The class also throws errors if there is an I/O error like file not found exception.
 
 1. Feature 1:(WordCounter.java)  for each tweet (line) the words are split on spaces, as per the requirements / assumptions given. The words are pushed to a tree map to preserve ASCCI ordering along with the count per word. 
